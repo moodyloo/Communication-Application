@@ -1,0 +1,78 @@
+
+{
+  name: CONNECTION
+  recieved: 'clientid'
+  return: 'list of commands'
+  prereqs: none
+  access: {
+    name: LOGIN
+    name: AVAILABLE-COMMANDS
+  }
+}
+
+{
+  name: LOGIN
+  recieved: 'user/password'
+  return: 'either: list of data or null'
+  prereq: CONNECTION
+  access: {
+    name: SEND-MESSAGE
+    name: VIEW-HISTORY
+    name: VIEW-PREFERENCES
+    name: DELETE-MESSAGE
+    name: SET-PREFERENCES
+  }
+}
+{
+  name: SEND-MESSAGE
+  recieved: data
+  return: boolean
+  prereq: LOGIN
+  access: {
+  }
+}
+
+{
+  name: VIEW-HISTORY
+  recieved: none
+  return: data
+  prereq: LOGIN
+  access: {
+  }
+}
+
+{
+  name: VIEW-PREFERENCES
+  recieved: none
+  return: data
+  prereq: LOGIN
+  access: {
+  }
+}
+
+{
+  name: DELETE-MESSAGE
+  recieved: 'messageid'
+  return: boolean
+  prereq: LOGIN
+  access: {
+  }
+}
+
+{
+  name: AVAILABLE-COMMANDS
+  recieved: 'none'
+  return: 'array of commands'
+  prereq: CONNECTION
+  access: {
+  }
+}
+
+{
+  name: SET-PREFERENCES
+  recieved: data
+  return: boolean
+  prereq: LOGIN
+  access: {
+  }
+}

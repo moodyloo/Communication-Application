@@ -1,0 +1,19 @@
+@font-face {
+    font-family: KCRM;
+    src: url('/fonts/KingsBureauGrot-FiveOne.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: KCRMB;
+    src: url('/fonts/KingsBureauGrot-ThreeSeven.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: KCRi;
+    src: url('/fonts/KingsCaslonDisplayItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: KCR;
+    src: url('/fonts/KingsCaslon.ttf') format('truetype');
+}
